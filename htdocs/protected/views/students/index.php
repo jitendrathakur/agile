@@ -31,7 +31,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="dp1" value="" width="50"/>
+                                    <input type="text" class="form-control pull-right datepicker" id="dp1" value="" width="50"/>
                                 </div>
 
                             </td>
@@ -57,7 +57,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="dp2" value="" width="50"/>
+                                    <input type="text" class="form-control pull-right datepicker" id="dp2" value="" width="50"/>
                                 </div>
 
 
@@ -66,6 +66,29 @@
 
 
                                 <label> OT Services on IEP:</label>
+                                <input type="text" class="form-control" placeholder=""/>
+
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+
+                                <label> Duration:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right datepicker" id="duration" value="" width="50"/>
+                                </div>
+
+
+                            </td>
+                            <td>
+
+
+                                <label> Key</label>
                                 <input type="text" class="form-control" placeholder=""/>
 
 
@@ -256,6 +279,21 @@
 </div><!-- /.row -->
 <!-- END ACCORDION & CAROUSEL-->
 
+
+ <script type="text/javascript">
+
+    var date = new Date();
+    date.setDate(date.getDate() - 1);
+
+    $(function() {
+
+        $('.datepicker').datepicker({      
+            autoclose: true,
+            todayHighlight: true
+        });
+            
+    });
+</script>
 
 
 
