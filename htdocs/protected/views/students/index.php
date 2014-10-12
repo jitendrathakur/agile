@@ -2,6 +2,12 @@
 <section class="content">
 <!-- START ACCORDION & CAROUSEL-->
 <div class="row">
+    <div class="col-md-12">
+        <a id="collapse_all" class="btn btn-primary" data-status="0" > Expand </a>
+    </div>
+</div>
+
+<div class="row">
 <div class="col-md-12">
 <div class="box box-solid">
 <div class="box-header">
@@ -18,7 +24,7 @@
             </a><i class="fa fa-angle-double-right"></i>
         </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in">
+    <div id="collapseOne" class="panel-collapse collapse">
         <div class="box-body">
 
             <form role="form">
@@ -67,8 +73,7 @@
 
                                 <label> OT Services on IEP:</label>
                                 <input type="text" class="form-control" placeholder=""/>
-
-
+                                
                             </td>
                         </tr>
 
@@ -80,16 +85,29 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right datepicker" id="duration" value="" width="50"/>
+                                    <input type="text" class="form-control pull-right clockpicker" id="duration" value="" width="50"/>
                                 </div>
-
-
                             </td>
                             <td>
-
-
                                 <label> Key</label>
-                                <input type="text" class="form-control" placeholder=""/>
+                                <select id="" name="" class="form-control" >
+                                    <option value="AB"> Student Absent</option>
+                                    <option value="C"> Consulation</option>
+                                    <option value="D"> Direct Therapy with Student</option>
+                                    <option value="E"> Evaluation / Testing</option>
+                                    <option value="G"> Group Session</option>
+                                    <option value="H"> Holiday</option>
+                                    <option value="I"> IEP Initial</option>
+                                    <option value="IA"> IEP Annual</option>
+                                    <option value="IAD"> IEP Addendum</option>
+                                    <option value="IT"> IEP Triennial</option>
+                                    <option value="SF"> School Function</option>
+                                    <option value="TA"> Therapist Absent</option>
+                                    <option value="RTI "> Response to Intervention</option>
+                                    <option value="S"> Screen</option>
+                                    <option value="SST"> Student Study Team</option>
+                                    <option value="SC"> Staff Collaboration</option>
+                                </select>
 
 
                             </td>
@@ -287,8 +305,8 @@
 
  <script type="text/javascript">
 
-    var date = new Date();
-    date.setDate(date.getDate() - 1);
+    //var date = new Date();
+    //date.setDate(date.getDate() - 1);
 
     $(function() {
 
@@ -298,7 +316,31 @@
         });
         //============================
         
+        //duration
+        $('.clockpicker').clockpicker({
+            placement: 'top',
+            autoclose: true
+            
+        });
+        //============================
+        
         $('textarea').spellAsYouType();
+        //============================
+        
+        $('#collapse_all').click(function(){
+            console.log('hello vic');
+            var status = $(this).data('status');
+            
+            if ( 0 === status) {
+                $('#collapse_all').html('Collapse');
+                var status = $(this).data('status', 1);
+            } else {
+                $('#collapse_all').html('Expand');
+                var status = $(this).data('status', 0);
+            }
+            
+            $('#accordion .panel-collapse').collapse('toggle');
+        });
         //============================
     
     });

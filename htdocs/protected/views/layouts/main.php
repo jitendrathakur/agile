@@ -213,10 +213,16 @@
         <script src="js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
         
         <script src="js/plugins/JavaScriptSpellCheck/include.js" type="text/javascript"></script>
+        
+        <!--
         <script src="js/plugins/JavaScriptSpellCheck/extensions/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
         <link rel="stylesheet" href="js/plugins/JavaScriptSpellCheck/extensions/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+        -->
         
-
+        <link rel="stylesheet" href="js/plugins/clockpicker/bootstrap-clockpicker.css" type="text/css" media="screen" />
+        <script src="js/plugins/clockpicker/jquery-clockpicker.min.js" type="text/javascript"></script>
+        
+        
         <!-- AdminLTE App -->
         <script src="js/AdminLTE/app.js" type="text/javascript"></script>
 
