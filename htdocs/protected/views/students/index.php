@@ -258,7 +258,12 @@
                 <div class='col-md-12'>
                     <div class='box-body pad'>
                         <form>
-                            <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                            <textarea class="textarea" id="commentBox" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" ></textarea>
+                            <!--
+                            <input type="button" value="Spell Check" onclick="$('#commentBox').spellCheckInDialog({popUpStyle:'fancybox',theme:'clean'})">
+                            <input type="button" value="Spell Check" onclick="$Spelling.SpellCheckInWindow('commentBox')">
+                            -->
+                            
                         </form>
                     </div>
                 </div><!-- /.col-->
@@ -287,15 +292,16 @@
 
     $(function() {
 
-        $('.datepicker').datepicker({      
+        $('.datepicker').datepicker({
             autoclose: true,
             todayHighlight: true
         });
-            
+        //============================
+        
+        $('textarea').spellAsYouType();
+        //============================
+    
     });
 </script>
 
-
-
 </section><!-- /.content -->
-

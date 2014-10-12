@@ -187,7 +187,7 @@
 		<?php echo $form->error($model,'behavior'); ?>
 	</div>
 
-	<div class="row">
+	<div class="row"  >
 		<?php echo $form->labelEx($model,'comment'); ?>
 		<?php echo $form->textArea($model,'comment',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'comment'); ?>
