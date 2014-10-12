@@ -115,7 +115,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">                            
-                                <li><a href="index.php?r=students"><i class="fa fa-angle-double-right"></i> Treatment Note</a></li>
+                                <li><a href="index.php?r=treatmentdirects/create"><i class="fa fa-angle-double-right"></i> Treatment Note</a></li>
                                 <li><a href="index.php?r=students/create"><i class="fa fa-angle-double-right"></i> Students</a></li>
                                 <li><a href="#"><i class="fa fa-angle-double-right"></i> Direct Services</a></li>
                                <!-- <li><a href="#"><i class="fa fa-angle-double-right"></i> Indirect Services</a></li> -->

@@ -56,6 +56,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'treatmentdirects'    => array(self::HAS_ONE, 'Treatmentdirects',    'therapist_id')
 		);
 	}
 

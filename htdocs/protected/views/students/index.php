@@ -13,6 +13,7 @@
 <div class="box-header">
     <h3 class="box-title">Occupational Therapy Treatment Notes</h3>
 </div><!-- /.box-header -->
+
 <div class="box-body">
 <div class="box-group" id="accordion">
 <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
@@ -83,7 +84,7 @@
                                 <label> Duration:</label>
                                 <div class="input-group">
                                     <div class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
+                                        <span class="glyphicon glyphicon-time"></span>
                                     </div>
                                     <input type="text" class="form-control pull-right clockpicker" id="duration" value="" width="50"/>
                                 </div>
@@ -297,6 +298,7 @@
     <button type="submit" class="btn btn-info">Submit</button> <button type="submit" class="btn btn-danger">Cancelled</button>
 </div>
 </div><!-- /.box -->
+
 </div><!-- /.col -->
 
 </div><!-- /.row -->
