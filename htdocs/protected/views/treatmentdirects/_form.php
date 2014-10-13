@@ -52,7 +52,7 @@
 										<table width="100%">
 										<tr>
 											<td width="25%">
-												<?php echo $form->hiddenField(User::model(),'id', array('class'=>'form-control', 'value'=> '2')); ?>
+												<?php //echo $form->hiddenField(User::model(),'id', array('class'=>'form-control', 'value'=> '2')); ?>
 												
 												<?php echo $form->labelEx($model,'Date :'); ?>
 												<div class="input-group">

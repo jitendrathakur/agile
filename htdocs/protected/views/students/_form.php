@@ -46,7 +46,7 @@
 
 	<div class="form-group">
         <label for="Students_dob">Date of Birth*</label>
-		<?php echo $form->textField($model,'dob', array('class'=>'form-control')); ?>
+		<?php echo $form->textField($model,'dob', array('class'=>'form-control datepicker')); ?>
 		<?php echo $form->error($model,'dob'); ?>
 	</div>
 
@@ -67,7 +67,7 @@
 
         <div class="form-group">
             <label for="school_id">School</label>
-            <?php echo CHtml::dropDownList('school_id','', array(), array('class'=>'form-control')); ?>
+            <?php echo CHtml::dropDownList('Students[school_id]','', array(), array('class'=>'form-control', 'id' => 'school_id')); ?>
             <?php echo $form->error($model,'school_id'); ?>
         </div>
 
@@ -85,7 +85,7 @@
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'isactive'); ?>
-		<?php echo $form->textField($model,'isactive', array('class'=>'form-control')); ?>
+		<?php echo $form->checkBox($model,'isactive', array('class'=>'form-control')); ?>
 		<?php echo $form->error($model,'isactive'); ?>
 	</div>
 
@@ -105,4 +105,12 @@
             $("#school_id").prop("disabled", false);
         });
     });
+
+    $(function() {
+	    $('.datepicker').datepicker({
+        autoclose: true,
+        todayHighlight: true
+		  });
+		});
+
 </script>

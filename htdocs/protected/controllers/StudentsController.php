@@ -28,7 +28,7 @@ class StudentsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'list'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -67,8 +67,10 @@ class StudentsController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
+
 		if(isset($_POST['Students']))
 		{
+			
 			$model->attributes=$_POST['Students'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
@@ -121,12 +123,25 @@ class StudentsController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
+	{		
 		$dataProvider=new CActiveDataProvider('Students');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
 	}
+
+
+	/**
+	 * Lists all models.
+	 */
+	public function actionList()
+	{		
+		$dataProvider=new CActiveDataProvider('Students');
+		$this->render('list',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+
 
 	/**
 	 * Manages all models.
