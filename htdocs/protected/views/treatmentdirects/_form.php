@@ -122,7 +122,7 @@
 													, 'I' => 'IEP Initial', 'IA' => 'IEP Annual'
 													, 'IAD' => 'IEP Addendum', 'IT' => 'IEP Triennial', 'SF' => 'School Function', 'TA' => 'Therapist Absent'
 													, 'RTI' => 'Response to Intervention', 'S' => 'Screen', 'SST' => 'Student Study Team', 'SC' => 'Staff Collaboration' )
-												, array('class'=>'form-control'));
+												, array('class'=>'form-control', 'multiple' => 'multiple'));
 												?>
 												<?php echo $form->error($model,'key_id'); ?>
 											
@@ -475,6 +475,8 @@
             $('#accordion .panel-collapse').collapse('toggle');
         });
         //============================
+
+        $("#Treatmentdirects_key_id").chosen({width: "70%"});
     
     });
 </script>

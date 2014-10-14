@@ -26,6 +26,8 @@
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
+        <link href="css/chosen/chosen.css" rel="stylesheet" type="text/css" />
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -221,6 +223,8 @@
         
         <link rel="stylesheet" href="js/plugins/clockpicker/bootstrap-clockpicker.css" type="text/css" media="screen" />
         <script src="js/plugins/clockpicker/jquery-clockpicker.min.js" type="text/javascript"></script>
+
+        <script src="js/plugins/chosen/chosen.jquery.js" type="text/javascript"></script>
         
         
         <!-- AdminLTE App -->

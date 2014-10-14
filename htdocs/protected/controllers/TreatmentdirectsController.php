@@ -67,11 +67,12 @@ class TreatmentdirectsController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-// print_r($_POST);
-// exit;
+		// print_r($_POST);
+		// exit;
 		if(isset($_POST['Treatmentdirects']))
 		{
 			$_POST['Treatmentdirects']['therapist_id'] = 2;
+			$_POST['Treatmentdirects']['key_id'] = serialize($_POST['Treatmentdirects']['key_id']);
 			$model->attributes=$_POST['Treatmentdirects'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
